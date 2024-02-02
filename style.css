@@ -1,0 +1,327 @@
+/* basic set */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+/* #region topbar start */
+
+.topbar {
+    height: 30px;
+    background-color: #ececec;
+}
+.topbar .welcome {
+    line-height: 30px;
+    font-size: 0;
+    height: 30px;
+}
+.topbar span, .topbar a {
+    font-size: 12px;
+}
+.topbar .hello {
+    margin-right: 28px;
+}
+.welcome .login {
+    padding-right: 10px;
+    border-right: 1px solid #888;
+}
+.welcome .register {
+    padding-left: 10px;
+}
+.nav ul {
+    height: 30px;
+    line-height: 30px;
+}
+.nav li {
+    float: left;
+    font-size: 12px;
+    
+}
+.nav li a {
+    border-right: #666 1px solid;
+    padding: 0 15px;
+}
+.nav ul li:first-child a {
+    padding-left: 0;
+}
+.nav ul li:last-child a {
+    padding-right: 0;
+    border: 0;
+}
+/* #endregion topbar end */
+/* #region header start */
+.header {
+    height: 120px;
+    /* background-color: skyblue; */
+}
+.header .logo {
+    height: 120px;
+}
+.header form {
+    margin-top: 42px;
+    font-size: 0;
+}
+.header input {
+    padding: 0;
+    
+    width: 508px;
+    height: 34px;
+    border: 1px solid #dd302d;
+}
+.header button {
+    width: 80px;
+    height: 36px;
+    background-color: #dd302d;
+    border: 0;
+    background-image: url(./image/search.png);
+    background-repeat: no-repeat;
+    vertical-align: top;
+    background-position: 28px 6px;
+}
+/* #endregion header end */
+/* #region main-nav start*/
+.main-nav {
+    height: 48px;
+    border-bottom: 1px #dd302d solid;
+}
+.main-nav .itemclass {
+    background-color: #dd302d;
+    width: 190px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.main-nav ul {
+    height: 48px;
+    line-height: 48px;
+}
+.main-nav li {
+    float: left;
+    font-size: 16px;
+    margin: 0 10px ;
+}
+.main-nav a {
+    
+    color: black;
+    font-weight: bold;
+}
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+/* #endregion main-nav end */
+/* #region main content start*/
+
+.main-content {
+    margin-top: 10px;
+}
+.main-content .side-nav {
+    width: 190px;
+    height: 458px;
+    background-color: #f4f4f4;
+    position: relative;
+}
+.main-content .side-nav li {
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    padding-left: 16px;
+}
+.main-content .side-nav li:hover {
+    background-color: #dd302d;
+}
+.main-content .side-nav li:hover>a{
+    color: white;
+}
+.main-content .second-menu {
+    width: 680px;
+    height: 458px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 190px;
+    padding-left: 20px;
+    display: none;
+}
+.main-content .side-nav li:hover .second-menu{
+    display: block;
+}
+.main-content .second-menu dl {
+    height: 36px;
+    line-height: 36px;
+}
+.main-content .second-menu dl:first-child {
+    margin-top: 10px;
+}
+.main-content .second-menu dt {
+    float: left;
+    width: 70px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.main-content .second-menu dt a{
+    color: #000;
+}
+.main-content .second-menu dd {
+    float: left;
+}
+
+.main-content .second-menu dd a {
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+
+.main-content .slide {
+    width: 690px;
+    height: 458px;
+    background-color: orange;
+    margin: 0 10px;
+}
+
+.main-content .nav-other {
+    width: 290px;
+    height: 458px;
+}
+
+
+.nav-other .message {
+    width: 260px;
+    height: 156px;
+    padding: 0 14px;
+    border: #D9d9d9 1px solid;
+}
+.nav-other .message .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #D9d9d9;
+}
+.nav-other .message .title span {
+    font-size: 14px;
+}
+.nav-other .message .title a {
+    font-size: 12px;
+}
+.nav-other li {
+    height: 26px;
+    line-height: 26px;
+}
+.nav-other li a {
+    font-size: 12px;
+}
+.nav-other .nav-side {
+    width: 290px;
+    height: 290px;
+    margin-top: 10px;
+    /* background-color: skyblue; */
+    overflow: hidden;
+}
+.other-nav-list:first-child {
+    margin-top: 16px;
+}
+.other-nav-list:nth-child(2) {
+    margin: 17px 0;
+}
+.other-nav-list li {
+    width: 48px;
+    height: 70px;
+    /* background-color: green; */
+    float: left;
+    margin: 0 11px;
+    text-align: center;
+    cursor: pointer;
+}
+.other-nav-list li:first-child {
+    margin-left: 16px;
+}
+.other-nav-list .picture {
+    width: 48px;
+    height: 48px;
+    background-image: url(./image/U91005a-20211230170644912-1-1024x768.jpg);
+}
+.other-nav-list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(2) .picture {
+    background-position: -48px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(3) .picture {
+    background-position: -96px 0;
+}
+.other-nav-list:nth-child(1) li:nth-child(4) .picture {
+    background-position: -144px 0;
+}
+
+
+.other-nav-list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0 -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(2) .picture {
+    background-position: -48px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(3) .picture {
+    background-position: -96px -48px;
+}
+.other-nav-list:nth-child(2) li:nth-child(4) .picture {
+    background-position: -144px -48px;
+}
+
+
+.other-nav-list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0 -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(2) .picture {
+    background-position: -48px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(3) .picture {
+    background-position: -96px -96px;
+}
+.other-nav-list:nth-child(3) li:nth-child(4) .picture {
+    background-position: -144px -96px;
+}
+/* #endregion main content */
+/* #region seckill start */
+.seckill {
+    margin-top: 10px;
+}
+.seckill img {
+    float: left;
+    margin-right: 11px;
+    cursor: pointer;
+}
+.seckill img:last-child {
+    margin-right: 0;
+}
+/* #endregion seckill */
+/* floor */
+.floor {
+    margin-top: 48px;
+}
+.floortop {
+    padding-bottom: 4px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom:1px #dd302d solid ;
+}
+
+.floorname {
+    font-size: 20px;
+}
+.floorlist li {
+    float: left;
+    font-size: 16px;
+}
+.floor li a {
+    padding: 0 10px;
+    border-right: 1px solid #666;
+}
+.floor li:first-child a{
+    padding-left: 0;
+}
+.floor li:last-child a {
+    border: 0;
+    padding-right: 0;
+}
+
+
+
+
