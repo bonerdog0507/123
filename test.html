@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Document</title>
+    <script>
+        const obj={
+            name:"obj",
+            sayhello:() => {
+                console.log(this);
+                console.log("sayhello");
+                const b=() => {
+                    console.log(this);
+                }
+                b()
+            }
+            
+        }
+        
+        obj.sayhello()
+        class Person {
+            name="123"
+        }
+        const p = new Person()
+        p.hello=() => "hello"
+        console.log(p)
+        document.write(p.hello())
+        let arr = [8, 1, 2, 3, 4, 5, 6, 7, 8, 9, 7]
+        let result = arr.map((ele) => ele*2 )
+        result = JSON.parse(JSON.stringify(p))
+        result = arr.filter((ele,index,...args) => index%3==0 )
+        result = arr.sort((a,b) => b-a)
+        for (const key in p) {
+            if (Object.hasOwnProperty.call(p, key)) {
+                const element = p[key];
+                console.log(key);
+                
+            }
+        }
+
+        // for( let i = 0; i < arr.length ; i++){
+            
+        //     for( let j = i+1 ; j< arr.length ; j++ ){
+        //         if(arr[j] === arr[i]){
+        //             arr.splice(j,1)
+        //             j--
+        //         }
+        //     }
+        // }
+
+        // for(let i=0; i<arr.length; i++){
+        //     let index=arr.indexOf(arr[i],i+1)
+        //     if(index!= -1){
+        //         arr.splice(index,1)
+        //         i--
+        //     }
+        // }
+        const newArr=[]
+        for(let ele of arr){
+            if(newArr.indexOf(ele) === -1){
+                newArr.push(ele)
+            }
+        }
+        let date = new Date()
+        console.log(newArr)
+        let re= /a(([a-z])c)/ig
+        let result1 = re.exec("abcagcarcahc")
+        result1 =re.exec("abcagcarcahc")
+        console.log(result1);
+        
+    </script>
+
+    </style>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .material-symbols-outlined {
+            font-size: 500px;
+        }
+
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+            position: sticky;
+            top: 0;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            animation-name: hello;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes hello {
+            0% {}
+
+            50% {
+                background-color: chocolate;
+            }
+
+            100% {
+                background-color: circle;
+                transform: translate(900px, 0) rotate(360deg);
+                border-radius: 50%;
+
+            }
+        }
+
+        .box {
+
+            height: calc(100vh - 100px);
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          
+
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            /* flex-grow: 1; */
+            width: 100px;
+            height: 200px;
+            background-color: gray;
+            border: 1px black solid;
+            
+
+            /* margin: auto; */
+        }
+        .h {
+            height: 1000px;
+        }
+        .marquee {
+            animation: marquee 5s infinite linear;
+            display: block;
+        }
+        @keyframes marquee {
+            0%{}
+            100%{
+                transform: translateX(100%);
+            }
+        }
+        #ball {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload =function(){
+            const allbtn = document.getElementById("all")
+            const cancelbtn = document.getElementById("cancel")
+            const reversebtn = document.getElementById("reverse")
+            const submitbtn = document.getElementById("submit")
+            const hobbies = document.getElementsByName("hobby")
+            const allchecked = document.getElementById("allchecked")
+            const ball = document.getElementById("ball")
+            const div = document.getElementsByTagName("div")
+            allbtn.onclick = function(){
+                for (const hob of hobbies) {
+                    hob.checked =true
+                }
+                let checkedbox = document.querySelectorAll("[name = hobby]:checked")
+                if(checkedbox.length == hobbies.length){
+                        allchecked.checked = true
+                    }
+                else
+                    allchecked.checked = false
+            }
+            cancelbtn.addEventListener("click",() => {
+                for (const hob of hobbies) {
+                    hob.checked = false
+                }
+                let checkedbox = document.querySelectorAll("[name = hobby]:checked")
+                if(checkedbox.length == hobbies.length){
+                        allchecked.checked = true
+                    }
+                else
+                    allchecked.checked = false
+            })
+            reversebtn.addEventListener("click",function(){
+                for (const hobby of hobbies) {
+                    hobby.checked = !hobby.checked
+                }
+                let checkedbox = document.querySelectorAll("[name = hobby]:checked")
+                if(checkedbox.length == hobbies.length){
+                        allchecked.checked = true
+                    }
+                else
+                    allchecked.checked = false
+            })
+            submitbtn.onclick = () => {
+                for (const hobby of hobbies) {
+                    hobby.checked&&alert(hobby.value)
+                    
+                }
+            }
+            allchecked.onchange = function(){
+                for (const hobby of hobbies) {
+                    hobby.checked = allchecked.checked
+                }
+            }
+            for (const hobby of hobbies) {
+                hobby.onchange = () => {
+                    let checkedbox = document.querySelectorAll("[name = hobby]:checked")
+                    if(checkedbox.length == hobbies.length){
+                        allchecked.checked = true
+                    }
+                    else
+                        allchecked.checked = false
+                }
+            }
+            document.addEventListener("mousemove",event => {
+                ball.style.left = event.pageX + "px"
+                ball.style.top = event.pageY + "px"
+                
+                
+            })
+            console.log([...div])
+
+        }
+    </script>
+</head>
+
+<body>
+    
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="outer" id="outer">
+        <div class="inner"></div>
+    </div>
+    <div>
+        選擇興趣 <input type="checkbox" name="all" id="allchecked"> 全選
+    </div>
+    <div>
+        <input type="checkbox" name="hobby" value="抽菸" >抽菸
+        <input type="checkbox" name="hobby"  value="跳舞">跳舞
+        <input type="checkbox" name="hobby" value="尿尿" >尿尿
+        <input type="checkbox" name="hobby"  value="睡覺">睡覺
+    </div>
+    <div>
+        <button id="all">全選</button>
+        <button id="cancel">取消</button>
+        <button id="reverse">反選</button>
+        <button id="submit">提交</button>
+    </div>
+    <div id="mar">
+        <span class="marquee">早安你好</span>
+    </div>
+    <div id="ball"></div>
+    
+    <div class="h"></div>
+</body>
+
+</html>
